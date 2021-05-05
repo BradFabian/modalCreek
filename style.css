@@ -1,0 +1,340 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.container {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 60%; /* Could be more or less, depending on screen size */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px 1px rgb(75, 74, 74);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.ModalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.modalTitle {
+  color: black;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* The Close Button */
+/*.close {
+      color: #e7ae42;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }*/
+
+.close {
+  color: #aaa;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: #fefefe;
+  position: absolute;
+  top: -10;
+  right: -10;
+  text-align: center;
+  width: 2rem;
+  text-decoration: none;
+}
+.close:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeSpan {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+
+  text-align: center;
+
+  width: 70px;
+  text-decoration: none;
+}
+.closeSpan:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.detailsLink {
+  font-size: 0.7rem;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
+  color: #e7ae42;
+  text-decoration-color: #e7ae42;
+}
+
+.detailsLink:hover {
+  color: peru;
+  text-decoration-color: peru;
+}
+
+.eventText {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2.3em;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.trademark {
+  position: relative;
+  font-size: 40%;
+  top: -1.2em;
+}
+
+.banner {
+  border: none;
+  margin: 0 auto;
+  background-image: url("imgs/05202021_BOGOcreek_sort-header3-copy.jpg"); /* The image used */
+  /* You must set a specified height */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  overflow: hidden;
+  padding: 1rem;
+  height: auto;
+  max-width: 100%;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text {
+  width: 50rem;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*.banner-text p.banner-header-text {
+            font-family: 'Nanum Myeongjo', serif !important;
+            font-size: calc( 25px + (30 - 25 ) * ( (100vw - 320px) / ( 1600 - 320) )) !important;
+            font-style: normal!important;
+            color: #000000 !important;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: .5rem ;
+                    max-width: 461px;
+            -webkit-font-smoothing: antialiased;
+        }*/
+
+.creekEvent {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.creekEvent::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  bottom: 10px;
+  background: #e7ae42;
+  z-index: 2;
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* optional hover classes used with anmiation */
+.creekEvent:hover:after {
+  width: 80%;
+  background: #e7ae42;
+}
+
+.bogoText {
+  font-size: 1rem;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+}
+
+.discountText {
+  color: #b47705;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  height: 4.2rem;
+  line-height: 1;
+}
+
+.banner-text p.banner-refinement-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #000000 !important;
+  text-align: center;
+  line-height: 1.5rem;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.banner-img {
+  z-index: 0;
+  position: absolute;
+}
+
+#bkg {
+  margin: 0;
+  max-width: 972px;
+  max-height: 270px;
+}
+
+@media screen and (-ms-high-contrast: active),
+  screen and (-ms-high-contrast: none) {
+  .banner-img {
+    z-index: 0;
+    position: absolute;
+    top: 2.5em;
+    right: 1em;
+  }
+
+  .banner-text {
+    z-index: 1;
+    width: 100%;
+    margin: inherit;
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  .banner {
+    padding: 0.6rem;
+  }
+
+  .banner-img {
+    display: block;
+    width: 100%;
+  }
+
+  .banner-text {
+    height: 90%;
+    margin: 0 auto;
+  }
+
+  .banner-text h1.banner-header-text {
+    font-size: calc(
+      12px + (30 - 25) * ((100vw - 320px) / (1600 - 320))
+    ) !important;
+  }
+
+  .banner-text p.banner-refinement-text {
+    font-size: 0.6rem;
+    line-height: 0.8;
+    margin: 5px auto;
+  }
+  .creekEvent {
+    line-height: 0.8;
+  }
+
+  .creekEvent::after {
+    bottom: 0;
+  }
+  .creekEvent,
+  .bogoText {
+    font-size: 0.6rem;
+  }
+
+  .detailsLink {
+    font-size: 0.4rem;
+  }
+
+  .discountText {
+    font-size: 1.5rem;
+    height: 1.8rem;
+    line-height: 1;
+  }
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 768px) {
+  .banner-img {
+    display: block;
+  }
+
+  .banner-text {
+    padding: 0;
+  }
+
+  .banner-text h1.banner-header-text {
+    font-size: calc(
+      25px + (30 - 25) * ((100vw - 320px) / (1600 - 320))
+    ) !important;
+  }
+
+  .banner-text p.banner-refinement-text {
+    font-size: calc(
+      10px + (12 - 9) * ((100vw - 300px) / (1600 - 300))
+    ) !important;
+    line-height: 0.8rem;
+    max-width: 340px;
+  }
+}
